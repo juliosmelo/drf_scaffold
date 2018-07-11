@@ -1,0 +1,17 @@
+from django.shortcuts import render
+from rest_framework import generics
+from {{app_name}}.models import {{camel_case_model_name}}
+from {{app_name}}.serializers import {{camel_case_model_name}}Serializer
+
+# Create your views here.
+
+
+class {{camel_case_model_name}}ListCreateView(generics.ListCreateAPIView):
+    queryset = {{camel_case_model_name}}.objects.all()
+    serializer_class = {{camel_case_model_name}}Serializer
+
+
+class {{camel_case_model_name}}RUDAView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = {{camel_case_model_name}}.objects.all()
+    serializer_class = {{camel_case_model_name}}Serializer
+

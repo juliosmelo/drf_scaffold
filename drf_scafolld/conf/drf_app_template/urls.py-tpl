@@ -1,0 +1,12 @@
+from django.conf.urls import url
+from . import views as {{app_name}}_view
+
+
+urlpatterns = [
+    url(r'^{{app_name}}/$', 
+        {{app_name}}_view.{{camel_case_model_name}}ListCreateView.as_view(), name='{{app_name}}-{{model_name}}-list'
+    ),
+    url(r'^{{app_name}}/(?P<pk>\d+)/$', 
+        {{app_name}}_view.{{camel_case_model_name}}RUDAView.as_view(), name='{{app_name}}-{{model_name}}-ruda'
+    )
+]

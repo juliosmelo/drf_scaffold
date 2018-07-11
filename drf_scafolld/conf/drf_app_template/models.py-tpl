@@ -1,0 +1,10 @@
+from django.db import models
+
+# Create your models here.
+
+class {{camel_case_model_name}}(models.Model):
+{% for model_field in model_fields %}
+    {{ model_field.0 }} = models.{{ model_field.1 }}
+{% endfor %}
+    def __str__(self):
+        return self.{{model_fields.0.0}}

@@ -1,0 +1,8 @@
+from rest_framework.serializers import ModelSerializer
+from .models import {{camel_case_model_name}}
+
+
+class {{ camel_case_model_name }}Serializer(ModelSerializer):
+    class Meta:
+        model = {{ camel_case_model_name }}
+        fields = '__all__'
