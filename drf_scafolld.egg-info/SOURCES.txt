@@ -1,0 +1,8 @@
+README.md
+setup.py
+drf_scafolld/__init__.py
+drf_scafolld.egg-info/PKG-INFO
+drf_scafolld.egg-info/SOURCES.txt
+drf_scafolld.egg-info/dependency_links.txt
+drf_scafolld.egg-info/not-zip-safe
+drf_scafolld.egg-info/top_level.txt

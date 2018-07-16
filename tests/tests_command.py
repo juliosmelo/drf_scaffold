@@ -1,5 +1,7 @@
 import unittest
 import django
+import os
+
 from django.conf import settings
 from django.core.management import call_command
 from django.test import override_settings
@@ -18,3 +20,4 @@ class CommandTestCase(SimpleTestCase):
 
     def test_command(self):
         call_command('startdrfapp', 'test_drfscafolld', '-m', 'my_model', '--fields', 'name:string, username:string, age:integer, id:uuid')
+        self.assertTrue(os.path.exists('./test_drfscafolld'))

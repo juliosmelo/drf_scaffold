@@ -17,11 +17,6 @@ AUTHOR = 'juliocsmelo'
 AUTHOR_EMAIL = 'juliocsmelo@gmail.com'
 LICENSE = 'MIT'
 PACKAGES = ['drf_scafolld']
-CLASSIFIERS=(
-    "Programming Language :: Python :: 3",
-    "License :: MIT License",
-    "Operating System :: OS Linux :: Unix",
-),
 
 setuptools.setup(name=NAME,
       version=VERSION,
@@ -31,5 +26,4 @@ setuptools.setup(name=NAME,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
       packages=PACKAGES,
-      zip_safe=False,
-      classifiers=CLASSIFIERS)
+      zip_safe=False)

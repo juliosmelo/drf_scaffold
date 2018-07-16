@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: drf-scafolld
+Version: 0.1
+Summary: Dead simple custom command to create a django app with djando rest framework CRUD RESTFull API
+Home-page: https://github.com/juliosmelo/drf_scafolld
+Author: juliocsmelo
+Author-email: juliocsmelo@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
