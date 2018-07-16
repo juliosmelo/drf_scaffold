@@ -1,11 +1,11 @@
 # Setup
 
-## Install drf_scafolld
+## Install via pip
 
 ```bash
-pip install drf_scafolld==1.0
+pip install drfscafolld
 ```
-## Add to INSTALLED_APPS in django settings.py
+## Add it to installed apps in django settings.py:
 
 ```python
 INSTALLED_APPS = (
@@ -13,16 +13,15 @@ INSTALLED_APPS = (
     'drf_scafollf',
 )
 ```
-## run command
+
+## Now create the drf app 
 
 ```bash
-    python manage.py drfstatapp themodel --fields name:string:50 nickname:string:40 age:integer
+    python manage.py startdrfapp -m my_model --fields 'name:string:50 nickname:string: age:integer email:email'
 ```
 
-# Usage
-```bash
+The command above will generate a django app with models, serializers, views and urls.py. You must add the the to installed apps django settings, run migrations commands and add the url in root projects's urls.py.
 
-```
 # Run tests
 ```bash
 python -m unittest
