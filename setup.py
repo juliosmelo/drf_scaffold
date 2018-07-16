@@ -1,7 +1,7 @@
 import codecs
 import re
 import os
-from distutils.core import setup
+import setuptools
 
 
 def get_version(filename):
@@ -11,14 +11,19 @@ def get_version(filename):
 
 NAME = 'drf_scafolld'
 VERSION = get_version(os.path.join('drf_scafolld', '__init__.py'))
-DESCRIPTION = 'Dead simple scafolld to create a djanfo rest framework CRUD RESTFull API'
-URL = ''
-AUTHOR = 'juliosmelo'
-AUTHOR_EMAIL = 'julio.melo@solvd.tech'
-LICENSE = ''
+DESCRIPTION = 'Dead simple custom command scafolld to create a django app with djando rest framework CRUD RESTFull API'
+URL = 'https://github.com/juliosmelo/drf_scafolld'
+AUTHOR = 'juliocsmelo'
+AUTHOR_EMAIL = 'juliocsmelo@gmail.com'
+LICENSE = 'MIT'
 PACKAGES = ['drf_scafolld']
+CLASSIFIERS=(
+    "Programming Language :: Python :: 3",
+    "License :: MIT License",
+    "Operating System :: OS Linux :: Unix",
+),
 
-setup(name=NAME,
+setuptools.setup(name=NAME,
       version=VERSION,
       description=DESCRIPTION,
       url=URL,
@@ -26,4 +31,5 @@ setup(name=NAME,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
       packages=PACKAGES,
-      zip_safe=False)
+      zip_safe=False,
+      classifiers=CLASSIFIERS)

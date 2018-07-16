@@ -1,7 +1,30 @@
 
 MODEL_FIELDS = {
-    "string": "CharField()",
+    "string": "CharField(max_length=200)",
     "integer": "IntegerField()",
     "decimal": "DecimalField()",
-    "positive": "PositiveIntegerField()"
+    "positive": "PositiveIntegerField()",
+    "auto": "AutoField()",
+    "bigauto": "BigAutoField()",
+    "bigint": "BigIntegerField()",
+    "binary": "BinaryField()",
+    "boolean": "BooleanField()",
+    "date": "DateField()",
+    "datetime": "DateTimeField()",
+    "duration": "DurationField()",
+    "email": "EmailField()",
+    "file": "FileField()",
+    "filepath": "FilePathField()",
+    "float": "FloatField()",
+    "image": "ImageField()",
+    "genericip": "GenericIPAddressField()",
+    "nullboolean": "NullBooleanField()",
+    "positiveint": "PositiveIntegerField()",
+    "positivesmalint": "PositiveSmallIntegerField()",
+    "slug": "SlugField()",
+    "smallint": "SmallIntegerField()",
+    "text": "TextField()",
+    "time": "TimeField()",
+    "url": "URLField()",
+    "uuid": "UUIDField()"
 }

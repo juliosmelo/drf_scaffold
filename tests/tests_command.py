@@ -17,4 +17,4 @@ django.setup()
 class CommandTestCase(SimpleTestCase):
 
     def test_command(self):
-        call_command('startdrfapp', 'test_drfscafolld', '-m', 'my_model', '--fields', 'name:string, username:string, age:integer')
+        call_command('startdrfapp', 'test_drfscafolld', '-m', 'my_model', '--fields', 'name:string, username:string, age:integer, id:uuid')
