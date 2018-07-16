@@ -3,7 +3,7 @@
 ## Install via pip
 
 ```bash
-pip install drfscafolld
+pip install drf_scafolld
 ```
 ## Add it to installed apps in django settings.py:
 
