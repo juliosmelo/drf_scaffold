@@ -10,7 +10,7 @@ pip install drf_scafolld
 ```python
 INSTALLED_APPS = (
     ...
-    'drf_scafollf',
+    'drf_scafolld',
 )
 ```
 
