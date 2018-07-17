@@ -1,8 +1,9 @@
 from os import path
-import drf_scafolld
+import drf_scaffold
+from drf_scaffold.constants import MODEL_FIELDS
 
 from django.core.management.templates import TemplateCommand
-from .constants import MODEL_FIELDS
+
 
 class Command(TemplateCommand):
     help = (
@@ -26,7 +27,7 @@ class Command(TemplateCommand):
         app_name = options.pop('name')
         model_name = options.pop('model_name')
         fields = options.pop('fields')[0].split(',')
-        options['template'] = path.join(drf_scafolld.__path__[0], 'conf', 'drf_app_template')
+        options['template'] = path.join(drf_scaffold.__path__[0], 'conf', 'drf_app_template')
         options['model_name'] = model_name
         options['model_fields'] = [(field.split(':')[0].strip(), MODEL_FIELDS.get(field.split(':')[1])) for field in fields]
         options['camel_case_model_name'] = ''.join(x for x in model_name.title() if x != '_')
