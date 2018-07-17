@@ -4,4 +4,4 @@ test_drfscafolld
 .idea
 dist/
 build/
-drf_scafolld.egg-info
+drf_scaffold.egg-info/
