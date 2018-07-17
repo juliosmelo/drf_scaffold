@@ -9,17 +9,17 @@ def get_version(filename):
         contents = fp.read()
     return re.search(r"__version__ = ['\"]([^'\"]+)['\"]", contents).group(1)
 
-NAME = 'drf_scafolld'
-VERSION = get_version(os.path.join('drf_scafolld', '__init__.py'))
+NAME = 'drf_scaffold'
+VERSION = get_version(os.path.join('drf_scaffold', '__init__.py'))
 DESCRIPTION = 'Dead simple custom command to create a django app with djando rest framework CRUD RESTFull API'
-URL = 'https://github.com/juliosmelo/drf_scafolld'
+URL = 'https://github.com/juliosmelo/drf_scaffold'
 AUTHOR = 'juliocsmelo'
 AUTHOR_EMAIL = 'juliocsmelo@gmail.com'
 LICENSE = 'MIT'
 PACKAGES=[
-        'drf_scafolld',
-        'drf_scafolld.management',
-        'drf_scafolld.management.commands']
+        'drf_scaffold',
+        'drf_scaffold.management',
+        'drf_scaffold.management.commands']
 REQUIREMENTS = ['Django>=1.11', 'djangorestframework>=3.8.2']
 CLASSIFIERS=[
         'Development Status :: 5 - Production/Stable',

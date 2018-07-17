@@ -3,14 +3,14 @@
 ## Install via pip
 
 ```bash
-pip install drf_scafolld
+pip install drf_scaffold
 ```
 ## Add it to installed apps in django settings.py:
 
 ```python
 INSTALLED_APPS = (
     ...
-    'drf_scafolld',
+    'drf_scaffold',
 )
 ```
 
