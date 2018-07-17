@@ -12,7 +12,7 @@ django.setup()
 
 @override_settings(
     INSTALLED_APPS=[
-        'drf_scafolld',
+        'drf_scaffold',
     ],
 )
 
