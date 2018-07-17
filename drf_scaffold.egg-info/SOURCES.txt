@@ -1,0 +1,13 @@
+README.md
+setup.py
+drf_scaffold/__init__.py
+drf_scaffold/constants.py
+drf_scaffold.egg-info/PKG-INFO
+drf_scaffold.egg-info/SOURCES.txt
+drf_scaffold.egg-info/dependency_links.txt
+drf_scaffold.egg-info/not-zip-safe
+drf_scaffold.egg-info/requires.txt
+drf_scaffold.egg-info/top_level.txt
+drf_scaffold/management/__init__.py
+drf_scaffold/management/commands/__init__.py
+drf_scaffold/management/commands/startdrfapp.py

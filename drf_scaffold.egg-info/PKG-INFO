@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: drf-scaffold
+Version: 0.1.2
+Summary: Dead simple custom command to create a django app with djando rest framework CRUD RESTFull API
+Home-page: https://github.com/juliosmelo/drf_scaffold
+Author: juliocsmelo
+Author-email: juliocsmelo@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: System :: Installation/Setup
