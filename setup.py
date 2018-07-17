@@ -1,7 +1,8 @@
 import codecs
 import re
 import os
-import setuptools
+
+from setuptools import find_packages, setup
 
 
 def get_version(filename):
@@ -20,7 +21,7 @@ PACKAGES=[
         'drf_scaffold',
         'drf_scaffold.management',
         'drf_scaffold.management.commands']
-REQUIREMENTS = ['Django>=1.11', 'djangorestframework>=3.7.3']
+REQUIREMENTS = ['Django>=1.11']
 CLASSIFIERS=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
@@ -38,14 +39,17 @@ CLASSIFIERS=[
         'Programming Language :: Python :: 3.6',
         'Topic :: System :: Installation/Setup']
 
-setuptools.setup(name=NAME,
+EXCLUDE_FROM_PACKAGES = ['drf_scaffold.conf.drf_app_template',]
+
+setup(name=NAME,
       version=VERSION,
       description=DESCRIPTION,
       url=URL,
       author=AUTHOR,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
-      packages=PACKAGES,
+      packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
       install_requires=REQUIREMENTS,
+      include_package_data=True,
       classifiers=CLASSIFIERS,
       zip_safe=False)
