@@ -21,7 +21,7 @@ PACKAGES=[
         'drf_scaffold',
         'drf_scaffold.management',
         'drf_scaffold.management.commands']
-REQUIREMENTS = ['Django>=1.11']
+REQUIREMENTS = ['django']
 CLASSIFIERS=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
