@@ -1,3 +1,5 @@
+from django.db import models
+
 STRING = "string"
 INTEGER = "integer"
 DECIMAL = "decimal"
@@ -26,6 +28,15 @@ TIME = "time"
 URL = "url"
 UUID = "uuid"
 FK = "fk"
+
+DELETE_CONSTRAINTS = [
+    models.CASCADE.__name__,
+    models.PROTECT.__name__,
+    models.SET_NULL.__name__,
+    models.SET_DEFAULT.__name__,
+    models.SET.__name__,
+    models.DO_NOTHING.__name__,
+]
 
 MODEL_FIELDS = {
     STRING: "CharField(max_length=200)",

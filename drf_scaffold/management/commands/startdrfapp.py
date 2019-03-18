@@ -1,7 +1,7 @@
 from os import path
 import drf_scaffold
-from drf_scaffold.constants import MODEL_FIELDS, FK
-
+from drf_scaffold.constants import MODEL_FIELDS, FK, DELETE_CONSTRAINTS
+from django.db import models
 from django.core.management.templates import TemplateCommand
 
 
@@ -39,7 +39,26 @@ def separate_fields(fields):
     for field in fields:
         field_name, model_field = tuple(map(lambda f: f.strip(), field.split(':')))
         if model_field.split()[0] == FK:
-            model_field = MODEL_FIELDS.get(model_field.split()[0]).format(*model_field.split()[1:])
+            model_field = manage_foreign_keys_field(model_field)
         else:
             model_field = MODEL_FIELDS.get(model_field)
         yield field_name, model_field
+
+
+def manage_foreign_keys_field(model_field):
+    '''
+    format for foreign keys
+    fk app_name.model_name [on_delete_type]
+    '''
+    if len(model_field.split()) < 2:
+        raise ValueError('must specify at least the model to reference')
+    arguments = model_field.split()[1:]
+    if '.' not in arguments[0]:
+        raise ValueError('must specify reference as app.model')
+    if len(arguments) < 2:
+        arguments.append(models.CASCADE.__name__)
+    else:
+        if arguments[1] not in DELETE_CONSTRAINTS:
+            raise ValueError('delete constraint not in django on_delete_options')
+
+    return MODEL_FIELDS.get(model_field.split()[0]).format(*arguments)
