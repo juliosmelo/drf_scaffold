@@ -29,6 +29,17 @@ class Command(TemplateCommand):
         fields = options.pop('fields')[0].split(',')
         options['template'] = path.join(drf_scaffold.__path__[0], 'conf', 'drf_app_template')
         options['model_name'] = model_name
-        options['model_fields'] = [(field.split(':')[0].strip(), MODEL_FIELDS.get(field.split(':')[1])) for field in fields]
+        model_fields = [(f_name, m_field) for f_name, m_field in separate_fields(fields)]
+        options['model_fields'] = model_fields
         options['camel_case_model_name'] = ''.join(x for x in model_name.title() if x != '_')
         super().handle('app', app_name, **options)
+
+
+def separate_fields(fields):
+    for field in fields:
+        field_name, model_field = tuple(map(lambda f: f.strip(), field.split(':')))
+        if model_field.split()[0] == 'fk':
+            model_field = MODEL_FIELDS.get(model_field.split()[0]).format(*model_field.split()[1:])
+        else:
+            model_field = MODEL_FIELDS.get(model_field)
+        yield field_name, model_field

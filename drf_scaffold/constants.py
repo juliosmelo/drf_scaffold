@@ -26,5 +26,6 @@ MODEL_FIELDS = {
     "text": "TextField()",
     "time": "TimeField()",
     "url": "URLField()",
-    "uuid": "UUIDField()"
+    "uuid": "UUIDField()",
+    "fk": "ForeignKey('{}', on_delete=models.{})",
 }
