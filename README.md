@@ -1,10 +1,10 @@
 # Setup
 
-## Install via pip
+## install
 
-```bash
-pip install drf_scaffold
-```
+copy this repository an only add drf_scaffold in your project or in your sys.path
+
+
 ## Add it to installed apps in django settings.py:
 
 ```python
