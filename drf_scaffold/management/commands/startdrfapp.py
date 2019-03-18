@@ -1,6 +1,6 @@
 from os import path
 import drf_scaffold
-from drf_scaffold.constants import MODEL_FIELDS
+from drf_scaffold.constants import MODEL_FIELDS, FK
 
 from django.core.management.templates import TemplateCommand
 
@@ -38,7 +38,7 @@ class Command(TemplateCommand):
 def separate_fields(fields):
     for field in fields:
         field_name, model_field = tuple(map(lambda f: f.strip(), field.split(':')))
-        if model_field.split()[0] == 'fk':
+        if model_field.split()[0] == FK:
             model_field = MODEL_FIELDS.get(model_field.split()[0]).format(*model_field.split()[1:])
         else:
             model_field = MODEL_FIELDS.get(model_field)
