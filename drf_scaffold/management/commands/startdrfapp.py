@@ -1,8 +1,15 @@
 from os import path
-import drf_scaffold
-from drf_scaffold.constants import MODEL_FIELDS, FK, DELETE_CONSTRAINTS
+
+from django.apps import apps
 from django.db import models
 from django.core.management.templates import TemplateCommand
+
+import drf_scaffold
+from drf_scaffold.constants import (
+    MODEL_FIELDS,
+    FK,
+    DELETE_CONSTRAINTS
+)
 
 
 class Command(TemplateCommand):
@@ -47,7 +54,7 @@ def separate_fields(fields):
 
 def manage_foreign_keys_field(model_field):
     '''
-    format for foreign keys
+    format for foreign keys, on_delete type default is CASCADE
     fk app_name.model_name [on_delete_type]
     '''
     if len(model_field.split()) < 2:
@@ -55,6 +62,7 @@ def manage_foreign_keys_field(model_field):
     arguments = model_field.split()[1:]
     if '.' not in arguments[0]:
         raise ValueError('must specify reference as app.model')
+    apps.get_model(arguments[0]) # raise exception if not registered
     if len(arguments) < 2:
         arguments.append(models.CASCADE.__name__)
     else:
