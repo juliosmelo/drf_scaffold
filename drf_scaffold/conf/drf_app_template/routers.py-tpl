@@ -1,0 +1,6 @@
+from rest_framework import routers
+from .views import {{camel_case_model_name}}ViewSet
+
+
+router = routers.DefaultRouter()
+router.register('{{ model_name }}', {{camel_case_model_name}}ViewSet)
