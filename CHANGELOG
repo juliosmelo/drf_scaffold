@@ -1,5 +1,9 @@
+0.1.5
+    add new documentation
+    add support for foreign keys
+    remove hard coded var
 0.1.4: Bug fixes 
-    remove verison of django in required packages
+    remove version of django in required package
 0.1.3: Bug fixes 
     Add package require data to setup
 0.1.2: Bug fixes
